@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Spring Systems</title>
+
+    <!--  CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="screen" />
+
+<body>
+
+
+
+<!--Our World Scene goes Here!-->
+<div id="World">
+</div>
+
+
+
+<p id="signature"><a href="http://www.stevejtrettel.site" > stevejtrettel</a> </p>
+
+<!-- Math Parser Engine -->
+<script src="../3party/math.js"></script>
+
+
+<!-- Our Javscript Program -->
+
+<script  type="module">
+
+    //set the objects that will run in this simulation
+    //this is the only thing that needs to be changed to change the simulation
+    import item from "../common/items/SpringCube.js";
+    let objects = {...item};
+
+    let options = {
+        color: 0x2f508a,
+    }
+
+    //the function which builds a world from the default template,
+    //using these objects
+    import { mainFromTemplate } from "./mainFromTemplate.js";
+    //call the function to run the app
+    mainFromTemplate(objects, options);
+
+</script>
+
+
+</body>
+</html>
